@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'contact' %}">Contact us</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse show" id="navbarCollapse" style="">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">HOME</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+<br>
+    <form class="d-flex" action="{% url 'home' %}">
+          <input class="form-control me-2" type="text" placeholder="send ur message" aria-label="Text", name="send">
+          <button class="btn btn-outline-success" type="submit">Send</button>
+        </form>
+</body>
+
+
